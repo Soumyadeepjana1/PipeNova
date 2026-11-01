@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buildoragood - Anime Cartoon Movie Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-film logo-icon"></i>
+                <span class="logo-text">Buildoragood</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#movies" class="nav-link">Movies</a></li>
+                <li><a href="#booking" class="nav-link">Book Now</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-star"></i>
+                <span>Now Showing in Theaters</span>
+            </div>
+            <h1>Animate Your <span class="gradient-text">Movie Experience</span></h1>
+            <p>Discover the best anime and cartoon movies. Book your tickets now and enjoy the magic!</p>
+            <div class="hero-buttons">
+                <a href="#movies" class="btn btn-primary">
+                    <i class="fas fa-search"></i>
+                    Browse Movies
+                </a>
+                <a href="#booking" class="btn btn-secondary">
+                    <i class="fas fa-ticket-alt"></i>
+                    Book Tickets
+                </a>
+            </div>
+        </div>
+        <div class="hero-decoration">
+            <div class="floating-circle circle-1"></div>
+            <div class="floating-circle circle-2"></div>
+            <div class="floating-circle circle-3"></div>
+            <div class="movie-cards-float">
+                <i class="fas fa-film"></i>
+                <i class="fas fa-film"></i>
+                <i class="fas fa-film"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Movies Section -->
+    <section id="movies" class="movies-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Featured</span>
+                <h2>Popular Movies</h2>
+                <p>Handpicked anime and cartoon movies for you</p>
+            </div>
+
+            <div class="search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="movieSearch" placeholder="Search movies...">
+            </div>
+
+            <div class="movies-grid" id="moviesGrid">
+                <!-- Movies will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <div class="booking-wrapper">
+                <div class="booking-info">
+                    <span class="section-badge">Quick Booking</span>
+                    <h2>Book Your Tickets</h2>
+                    <p>Fill in the details below to book your movie tickets</p>
+
+                    <div class="booking-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Choose Movie</h3>
+                                <p>Select your favorite anime or cartoon</p>
+                            </div>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Pick Date & Time</h3>
+                                <p>Choose when you want to watch</p>
+                            </div>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Confirm Booking</h3>
+                                <p>Enter your details and enjoy!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form-container">
+                    <form id="bookingForm" class="booking-form">
+                        <h3>Booking Form</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="movieSelect">Select Movie</label>
+                                <select id="movieSelect" required>
+                                    <option value="">Choose a movie...</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="showtime">Showtime</label>
+                                <select id="showtime" required>
+                                    <option value="">Select time...</option>
+                                    <option value="10:00 AM">10:00 AM</option>
+                                    <option value="1:00 PM">1:00 PM</option>
+                                    <option value="4:00 PM">4:00 PM</option>
+                                    <option value="7:00 PM">7:00 PM</option>
+                                    <option value="10:00 PM">10:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bookDate">Date</label>
+                                <input type="date" id="bookDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tickets">Number of Tickets</label>
+                                <select id="tickets" required>
+                                    <option value="1">1 Ticket</option>
+                                    <option value="2">2 Tickets</option>
+                                    <option value="3">3 Tickets</option>
+                                    <option value="4">4 Tickets</option>
+                                    <option value="5">5 Tickets</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bookerName">Your Name</label>
+                            <input type="text" id="bookerName" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="your@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+1 (555) 000-0000" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-check-circle"></i>
+                            Confirm Booking
+                        </button>
+                    </form>
+
+                    <div id="bookingSuccess" class="booking-success">
+                        <div class="success-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <h3>Booking Confirmed!</h3>
+                        <p id="confirmationMessage"></p>
+                        <button class="btn btn-secondary" onclick="resetForm()">
+                            <i class="fas fa-redo"></i>
+                            New Booking
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-badge">Get in Touch</span>
+                    <h2>Contact Us</h2>
+                    <p>Have questions? We're here to help!</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>123 Animation Street, Anime City</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hello@buildoragood.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="fas fa-film logo-icon"></i>
+                        <span class="logo-text">Buildoragood</span>
+                    </a>
+                    <p>Your gateway to amazing anime and cartoon movies</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <a href="#home">Home</a>
+                        <a href="#movies">Movies</a>
+                        <a href="#booking">Book Now</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="#">FAQ</a>
+                        <a href="#">Help Center</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Buildoragood. All rights reserved. Made with <i class="fas fa-heart"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
