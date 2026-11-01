@@ -18,7 +18,7 @@ pipeline {
         stage('Docker Deploy') {
             steps {
                 sh 'docker rm -f buildora-demo || true'
-                sh 'docker run -d --name buildora-demo -p 8080:80 buildora:v1'
+                sh 'docker run -d --name buildora-demo -p 2222:80 buildora:v1'
             }
         }
     }
